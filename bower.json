@@ -1,0 +1,19 @@
+{
+  "name": "polymer",
+  "version": "0.0.0",
+  "authors": [
+    "subject1486 <bradgoyvaerts@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.8.0"
+  }
+}

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>Community</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <script src="components/webcomponentsjs/webcomponents.js"></script>
+    
+    <link rel="stylesheet" href="community.css">
+    
+    <link rel="import" href="elements.html">
+    
+
+    
+    <style>
+        
+        body{
+            font-family: Roboto, sans-serif;
+        }
+    
+    </style>
+
+</head>
+
+<body fullbleed layout vertical unresolved>
+    
+    <template is="auto-binding" id="tmpl">
+    
+    <core-drawer-panel id="drawerPanel" >
+        
+        <core-header-panel drawer id="drawer">
+            <core-toolbar>Menu</core-toolbar>
+            <core-menu id="menu" selected="{{selected}}" valueattr="label" onclick="document.querySelector('core-drawer-panel').togglePanel();">
+                <core-item label="Overzicht"></core-item>
+                <core-item label="Ideeën"></core-item>
+                <core-item label="Instellingen"></core-item>
+                <core-item label="Help"></core-item>
+                <core-item label="Over"></core-item>
+                <core-item label="Afmelden"></core-item>
+            </core-menu>
+        </core-header-panel>
+        
+        <core-header-panel main>
+            <core-toolbar>
+                <paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+                <div>{{selected}}</div>
+                <span flex></span>
+                <paper-icon-button icon="search"></paper-icon-button>
+            </core-toolbar>
+            
+            <core-pages selected="{{selected}}" valueattr="label">
+                <section label="Overzicht">
+                    <paper-tabs selected="{{selectedTab}}" valueattr="label">
+                        <paper-tab label="Lijst">LIJST</paper-tab>
+                        <paper-tab label="Kaart">KAART</paper-tab>
+                    </paper-tabs>
+                    <core-pages selected="{{selectedTab}}" valueattr="label">
+                    
+                    <section label="Lijst">
+                    
+                        <p>Lijst</p>
+                    
+                    </section>
+                    
+                    <section label="Kaart">
+                    
+                        <p>Kaart</p>
+                        
+                    </section>
+                    
+                    </core-pages>
+                </section>
+                <section label="Ideeën">
+                    <paper-tabs selected="{{selectedTabMe}}" valueattr="label">
+                        <paper-tab label="mijnIdeeen">MIJN IDEEEN</paper-tab>
+                        <paper-tab label="ikSteun">IK STEUN</paper-tab>
+                        <paper-tab label="ikHelp">IK HELP</paper-tab>
+                    </paper-tabs>
+                    <core-pages selected="{{selectedTabMe}}" valueattr="label">
+                    
+                    <section label="mijnIdeeen">
+                    
+                        <p>Mijn Ideeen...</p>
+                    
+                    </section>
+                    
+                    <section label="ikSteun">
+                    
+                        <p>Ik steun...</p>
+                        
+                    </section>
+                        
+                    <section label="ikHelp">
+                    
+                        <p>Ik help...</p>
+                        
+                    </section>
+                </section>
+                <section label="Instellingen">
+                    <p>Instellingen</p>
+                </section>
+                <section label="Help">
+                    <p>Help</p>
+                </section>
+                <section label="Over">
+                    <p>Over</p>
+                </section>
+                <section label="Afmelden">
+                    <p>Afmelden</p>
+                </section>                
+            </core-pages>
+
+        </core-header-panel>
+        
+    </core-drawer-panel>
+        
+    </template>
+
+    <script src="community.js"></script>
+</body>
+
+</html>
